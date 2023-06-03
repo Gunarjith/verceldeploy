@@ -5,7 +5,7 @@ from django.shortcuts import render
 import uuid
 reference_id = uuid.uuid4()
 
-@csrf_exempt
+
 def login(request):
 
     url = "https://test.cashfree.com/api/v1/order/create"
