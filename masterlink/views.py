@@ -5,7 +5,6 @@ from django.shortcuts import render
 import uuid
 reference_id = uuid.uuid4()
 
-
 def login(request):
 
     url = "https://test.cashfree.com/api/v1/order/create"
@@ -32,13 +31,13 @@ def login(request):
 
 
 def payment_info(request):
-    print("welcome")
     if request.method == 'POST':
-        print("ddd")
         # Fetch the payment response details from the request
         order_id = request.POST.get('order_id')
         payment_status = request.POST.get('payment_status')
         print(order_id)
         print(payment_status)
     return None
+
+
 
