@@ -30,13 +30,15 @@ def login(request):
 
     return render(request,'home.html',{"response":response.text})
 
-
+@csrf_exempt
 def payment_info(request):
+    print("welcome")
     if request.method == 'POST':
+        print("ddd")
         # Fetch the payment response details from the request
         order_id = request.POST.get('order_id')
         payment_status = request.POST.get('payment_status')
         print(order_id)
         print(payment_status)
-    return None
+    return render(request,'login.html')
 
