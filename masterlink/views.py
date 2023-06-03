@@ -12,7 +12,7 @@ def login(request):
     payload = {
         "appid": "TEST3931154d6e90b54bfbc3b4946d511393",
         "secretKey": "TEST701a10a8d7389d719903c77dda9fa993fbc0db63",
-        "orderId": reference_id,
+        "orderId": "asqw123",
         "orderAmount": "1",
         "orderCurrency": "INR",
         "oderNote": "pay",
