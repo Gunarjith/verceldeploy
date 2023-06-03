@@ -22,7 +22,7 @@ def login(request):
         "customerPhone": "8494863493",
         # "returnUrl": "https://cashfree.com",
 
-         "notifyUrl": "https://verceldeploy-h3tim9s0e-gunarjith.vercel.app/",
+         "notifyUrl": "https://verceldeploy-h3tim9s0e-gunarjith.vercel.app/payment_info/",
     }
 
     response = requests.request("POST", url, data=payload)
