@@ -21,7 +21,7 @@ def login(request):
         "customerPhone": "8494863493",
         # "returnUrl": "https://cashfree.com",
 
-         "notifyUrl": "https://verceldeploy.vercel.app",
+         "notifyUrl": "https://verceldeploy-sigma.vercel.app",
     }
 
     response = requests.request("POST", url, data=payload)
