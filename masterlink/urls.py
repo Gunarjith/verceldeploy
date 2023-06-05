@@ -19,5 +19,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.login),
-    path('payment_info/',views.payment_info,name='payment_info')
+    path('payment_info',views.payment_info,name='payment_info')
 ]
