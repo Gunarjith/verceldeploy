@@ -23,7 +23,7 @@ def login(request):
         "customerPhone": "8494863493",
         # "returnUrl": "https://cashfree.com",
 
-         "notifyUrl": "https://verceldeploy-h3tim9s0e-gunarjith.vercel.app/payment_info/",
+         
     }
     headers={
         'content_type':'application/json'
