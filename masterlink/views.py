@@ -2,9 +2,11 @@ from django.http import HttpResponse
 from django.http import HttpResponse
 import requests
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 import uuid
 reference_id = uuid.uuid4()
 
+@csrf_exempt
 def login(request):
 
     url = "https://test.cashfree.com/api/v1/order/create"
@@ -29,7 +31,7 @@ def login(request):
 
     return render(request,'home.html',{"response":response.text})
 
-
+@csrf_exempt
 def payment_info(request):
     if request.method == 'POST':
         # Fetch the payment response details from the request
