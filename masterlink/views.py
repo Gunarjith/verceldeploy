@@ -25,6 +25,9 @@ def login(request):
 
          "notifyUrl": "https://verceldeploy-h3tim9s0e-gunarjith.vercel.app/payment_info/",
     }
+    headers={
+        'content_type':'application/json'
+    }
 
     response = requests.request("POST", url, data=payload)
     print(response.text)
@@ -33,6 +36,7 @@ def login(request):
 
 @csrf_exempt
 def payment_info(request):
+    print(request.data)
     if request.method == 'POST':
         # Fetch the payment response details from the request
         order_id = request.POST.get('order_id')
