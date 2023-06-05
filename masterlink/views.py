@@ -6,7 +6,7 @@ from django.views.decorators.csrf import csrf_exempt
 import uuid
 reference_id = uuid.uuid4()
 
-@csrf_exempt
+
 def login(request):
 
     url = "https://test.cashfree.com/api/v1/order/create"
@@ -29,12 +29,12 @@ def login(request):
         'content_type':'application/json'
     }
 
-    response = requests.request("POST", url, data=payload)
+    response = requests.request("POST", url, data=payload,headers=headers)
     print(response.text)
 
     return render(request,'home.html',{"response":response.text})
 
-@csrf_exempt
+
 def payment_info(request):
     print(request.data)
     if request.method == 'POST':
